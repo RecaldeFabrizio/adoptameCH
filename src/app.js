@@ -17,6 +17,7 @@ const PORT = process.env.PORT||8080
 const connection = mongoose.connect(`mongodb+srv://FDR98:Hesoyam123@cluster0.gkja86y.mongodb.net/adoptameCH`)
 logger.info('Base de datos conectada')
 
+app.use(express.static(__dirname+'/public'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cookieParser())
